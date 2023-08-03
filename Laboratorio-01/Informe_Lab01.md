@@ -4,7 +4,7 @@
 
 ## 1. Introducción 
 
-**Definición** del problema (600 caracteres máximo)
+**Definición** del problema 600
 
 ### 1.1 Justificación (500 caracteres máximo)
 
