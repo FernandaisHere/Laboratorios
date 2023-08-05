@@ -4,8 +4,9 @@
 
 ## 1. Introducción 
 
-**Definición** del problema 600 caracteres
+El experimento con el que se trabajará se realizó dentro del proyecto *BaSiGo* (Bausteine ​​für die Sicherheit von Großveranstaltungen). El proyecto fue financiado por el Ministerio Federal de Educación e Investigación (BMBF) dentro del programa “Investigación para la Seguridad Civil”.
 
+Este se llevó a cabo en nueve carreras en las que se varió la densidad de personas dentro del corredor cambiando los anchos (b_1 y b_2). Para acortar el tiempo de preparación entre las carreras individuales, los peatones fueron enviados alternativamente desde ambos lados por la geometría construida simétricamente.
 
 ### 1.1 Justificación 
 
@@ -18,13 +19,14 @@ El estudio de los flujos peatonales en ciertos espacios urbanos presenta una alt
 
 **Objetivo General**
 
-Procesar la base de datos del estudio para su próximo análisis.
+Procesar la base de datos del estudio para su próximo análisis mediante el uso de librerias, listas, diccionarios, etc.
 
 **Objetivos específicos**
 
 1. Explorar y entender la base de datos.
 2. Limpiar y extraer los datos necesarios, en este caso las coordenadas a utilizar.
-3. Manipular los datos filtrados según lo solicitado.
+3. Manipular los datos filtrados según lo solicitado (transformar de metros a pixeles).
+4. Confeccionar mapas de calor para un análisis más interactivo.
 
 ## 2. Marco teórico
 
@@ -38,9 +40,11 @@ A continuación se presentan una serie de herramientas, estructuras y librerías
 
 *Numpy*: Esta librería proporciona distintas operaciones numéricas, matriciales y arreglos multidimensionales. Además, permite realizar arreglos más eficientes que las listas tradicionales de Python.
 
+*Matplotlib*: Esta libreria entrega multiples codigos para realizar distintos tipos de graficos, en este laboratorio se utilizara el grafico de calor.
+
 ## 3. Materiales y métodos
 
-Para la confección de este laboratorio se utilizará un dataset identificado como "UNI_CORR_500_01.txt", el cual es un archivo de texto que contiene cinco columnas, las primeras dos corresponden a identificadores y las tres restantes son las coordenadas (X, Y y Z) las cuales seran procesadas. Estos datos (coordenadas) corresponden a datos de tipo float.
+Para la confección de este laboratorio se utilizará un dataset identificado como "UNI_CORR_500_01.txt", el cual es un archivo de texto que contiene cinco columnas, las primeras dos corresponden a identificadores y las tres restantes son las coordenadas (X, Y y Z) las cuales seran procesadas. Estos datos (coordenadas) corresponden a datos de tipo float. Para este archivo la medida correspondiente a b_1 y b_2 es de 1,00 y 5,00 metros respectivamente.
 
 PARTE 1
 
@@ -59,8 +63,7 @@ Indicar si el funcionamiento es correcto, agregar métricas de rendimiento como 
 | Programa Dos (p02.py) |                            |                         |
 
 
-
-<img src="images/column-chart.png" width="300">
+<img src="images/mapa_color.png" width="300">
 
 ## 5. Conclusiones
 
