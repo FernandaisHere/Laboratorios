@@ -66,23 +66,19 @@ Luego de realizar, ejecutar y corroborar que el código funciona correctamente s
 
 | Tipo de Experimento   | Tiempo de ejecucion (seg) |  Memoria utilizada (Mb) |
 |-----------------------|---------------------------|-------------------------|
-| Programa Uno (Lab01.py) |  4.769325256347656               |       95.10546875                  |
+| Programa 1 (Archivo_1.py) |  4.769325256347656               |       95.10546875                  |
+| Programa 2 (Archivo_1.py)|     |      |
+| Programa 1 (Archivo_2.py)|     |      |
+| Programa 2 (Archivo_2.py)|     |      |
 
 El uso de memoria residente se encuentra expresado en la tabla anterior con un valor de 95.10 MB aproximadamente, de igual manera se obtuvo el uso de memoria virtual el cual corresponde a 89.296875 MB y el porcentaje de uso de la CPU del programa es de 6.675%.
-
-En la siguiente tabla se presentan algunos indicadores de las coordenadas X e Y en pixeles, como el mínimo valor, el máximo valor, la varianza de cada una y sus medianas.
-
-| Coordenada en pixel   | Min |  Max |  Varianza |  Mediana |
-|-----------------------|---------------|----------|------------|------|
-| **X** |  124      |    486     |   10482.062816366419 | 299 |
-| **Y** |  28       |    459     |   12129.647296604257 | 235 |
-
 
 A continuación, se presenta el mapa de calor obtenido con las frecuencias en pixeles de las coordenadas X e Y del dataset, permitiendo identificar los pixeles que más se repiten. 
 
 Se puede apreciar que en los extremos (como la coordenada (640, 480)) el paso de los peatones es casi nulo y la mayor concentración se mantiene más centrada. En conjunto con la tabla anterior se comprueba que a lo largo del eje X la varianza es menor que en el eje Y, ya que los peatones se mueven hacia los costados para llegar al otro extremo.
 
-<img src="images/Mapa_Calor.png" width="420">
+<img src="images/Cmap_1.png" width="420">
+<img src="images/Cmap_2.png" width="420">
 
 ## 5. Conclusiones
 
