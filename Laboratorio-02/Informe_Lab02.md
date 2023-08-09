@@ -66,10 +66,10 @@ Luego de realizar, ejecutar y corroborar que el código funciona correctamente s
 
 | Tipo de Experimento   | Tiempo de ejecucion (seg) |  Memoria utilizada (Mb) |
 |-----------------------|---------------------------|-------------------------|
-| Programa 1 (Archivo_1.py) |  4.769325256347656               |       95.10546875                  |
-| Programa 2 (Archivo_1.py)|     |      |
-| Programa 1 (Archivo_2.py)|     |      |
-| Programa 2 (Archivo_2.py)|     |      |
+| Programa 1 (Archivo_1.py) | 0.806511402130127         | 120.69921875        |
+| Programa 2 (Archivo_1.py)|  0.1570277214050293  |   129.77734375  |
+| Programa 1 (Archivo_2.py)|  6.3635852336883545  |   120.4296875   |
+| Programa 2 (Archivo_2.py)|  0.5664870738983154  |   132.65625   |
 
 El uso de memoria residente se encuentra expresado en la tabla anterior con un valor de 95.10 MB aproximadamente, de igual manera se obtuvo el uso de memoria virtual el cual corresponde a 89.296875 MB y el porcentaje de uso de la CPU del programa es de 6.675%.
 
