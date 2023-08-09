@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import time
 import psutil
 
+'''  PROGRAMA 1  '''
 
 ### CUANTOS RECURSOS CONSUME EL PROGRAMA ###
 def get_resource_info(code_to_measure):
@@ -62,44 +63,7 @@ def mi_programa():
         #print(X, Y, Z, sep=' ')
 
 
-
-
     ### PARTE 1 ###
-
-    #Devolver las coordenadas X, Y y Z de la linea especificada 
-    k = int(input('Ingrese la linea de coordenadas: '))
-    print('Las coordenadas de la linea ', k, 'son: ', coordenadas[k-1])
-    print('')
-
-
-
-    ### PARTE 2 ###
-
-    #Cordenada X que mas se repite
-    FrecuenciasX = {coord [0]: 0 for coord in (coordenadas)}
-
-    for coord in coordenadas:
-        coordenadaX = coord[0]
-        FrecuenciasX[coordenadaX]+=1 #recuento de la frecuencia
-
-    max_frecuencia_X = max(FrecuenciasX.values())
-    coordenada_mas_repetida_X = [numero for numero, Frecuencia in FrecuenciasX.items() if Frecuencia == max_frecuencia_X]
-    print(f'La(s) coordenadas X que mas se repite(n): {coordenada_mas_repetida_X} con un recuento de {max_frecuencia_X} oportunidades')
-    print('')
-    #print(Frecuencias)
-
-
-    #Coordenadas Y que mas se repiten
-    FrecuenciasY = {coord[1]: 0 for coord in (coordenadas)}
-
-    for coord in coordenadas:
-        coordenadaY = coord[1]
-        FrecuenciasY[coordenadaY]+=1
-
-    max_frecuencia_Y = max(FrecuenciasY.values())
-    coordenada_mas_repetida_Y = [numero for numero, frecuencia in FrecuenciasY.items() if frecuencia == max_frecuencia_Y]
-    print(f'La(s) coordenadas Y que mas se repite(n): {coordenada_mas_repetida_Y} con un recuento de {max_frecuencia_Y} oportunidades')
-    print('')
 
     #Coordenadas X,Y que mas se repiten
     FrecuenciasXY = {tuple(coord[0:2]): 0 for coord in (coordenadas)}
@@ -110,10 +74,6 @@ def mi_programa():
 
     max_frecuencia_XY = max(FrecuenciasXY.values())
     tupla_mas_repetida = [numero for numero, frecuencia in FrecuenciasXY.items() if frecuencia == max_frecuencia_XY]
-    print(f'La(s) coordenadas X,Y que mas se repite(n): {tupla_mas_repetida} con un recuento de {max_frecuencia_XY} oportunidades')
-    print('')
-
-
 
 
     ### PARTE 3 ###
@@ -155,19 +115,6 @@ def mi_programa():
 
     print('')
 
-
-    print('El valor minimo de X es: ', min(Xpixel))
-    print('El valor maximo de X es: ', max(Xpixel))
-    print('La valor varianza de X es de: ', np.var(Xpixel))
-    print('La mediana de X es: ', np.median(Xpixel))
-    print('')
-    print('El valor minimo de Y es: ', min(Ypixel))
-    print('El valor maximo de Y es: ', max(Ypixel))
-    print('La varianza de Y es de: ', np.var(Ypixel))
-    print('La mediana de Y es: ', np.median(Ypixel))
-    print('')
-
-
     ### GRAFICAR MAPA DE CALOR ###
 
     bins = 350
@@ -185,7 +132,7 @@ def mi_programa():
 
 
 
-### CUANTOS RECURSOS CONSUME EL PROGRAMA ###
+### CUANTOS RECURSOS CONSUME EL PROGRAMA 1 ###
 
 if __name__ == "__main__":
     get_resource_info(mi_programa)
