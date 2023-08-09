@@ -76,7 +76,7 @@ def mi_programa():
     tupla_mas_repetida = [numero for numero, frecuencia in FrecuenciasXY.items() if frecuencia == max_frecuencia_XY]
 
 
-    ### PARTE 3 ###
+    ### PARTE 2 ###
 
     ix = 320
     iy = 480
