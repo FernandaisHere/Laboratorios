@@ -1,5 +1,5 @@
 ![Logo UCN](images/60x60-ucn-negro.png)
-# Laboratorio 01: Cálculo de frecuencia peatonal 
+# Laboratorio 02: Cálculo de frecuencia peatonal 
 
 
 ## 1. Introducción 
@@ -41,6 +41,8 @@ A continuación, se presentan una serie de herramientas, estructuras y librería
 *Numpy*: Esta librería proporciona distintas operaciones numéricas, matriciales y arreglos multidimensionales. Además, permite realizar arreglos más eficientes que las listas tradicionales de Python.
 
 *Matplotlib*: Esta librería entrega múltiples códigos para realizar distintos tipos de gráficos, en este laboratorio se utilizara el gráfico de calor.
+
+*Pandas*: 
 
 ## 3. Materiales y métodos
 
