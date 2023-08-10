@@ -19,7 +19,7 @@ El estudio de los flujos peatonales en ciertos espacios urbanos presenta una alt
 
 **Objetivo General**
 
-Procesar la base de datos para obtener la frecuencia por la que pasa un peatón por cada píxel.
+Procesar la base de datos para obtener la frecuencia por la que pasa un peatón por cada píxel y evaluar las opciones de lograrlo.
 
 **Objetivos específicos**
 
@@ -46,11 +46,11 @@ A continuación, se presentan una serie de herramientas, estructuras y librería
 
 ## 3. Materiales y métodos
 
-Para la confección de este laboratorio se utilizará un dataset identificado como "UNI_CORR_500_01.txt", el cual es un archivo de texto que contiene cinco columnas, las primeras dos corresponden a identificadores y las tres restantes son las coordenadas (X, Y y Z) las cuales serán procesadas. Estos datos (coordenadas) corresponden a datos de tipo float. Para este archivo la medida correspondiente a b_1 y b_2 es de 1,00 y 5,00 metros respectivamente.
+Para la confección de este laboratorio se utilizarán dos dataset identificados como "UNI_CORR_500_01.txt" y "UNI_CORR_500_07.txt", los cuales son archivos de texto que contienen cinco columnas, las primeras dos corresponden a identificadores y las tres restantes son las coordenadas (X, Y y Z) las cuales serán procesadas. Estos datos (coordenadas) corresponden a datos de tipo float. Para este archivo las medidas correspondientes a b_1 y b_2 para los archivos de texto 1 y 2 es de 1,00 y 5,00 metros, y 5,00 y 3,00 metros respectivamente.
 
-Para lograr identificar con qué frecuencia pasan las personas por ciertos puntos del corredor se manipulo el dataset y así obtener lo necesario para generar una visualización para su posterior análisis
+Para lograr identificar con qué frecuencia pasan las personas por ciertos puntos del corredor se manipularán ambos dataset y así obtener lo necesario para generar una visualización para su posterior análisis
 
-En primer lugar, se realiza una exploración y extracción de los datos requeridos del dataset. Se realizan una serie de códigos para obtener la línea de las coordenadas X, Y y Z según lo especificado. Todo lo anterior utilizando listas y ciclos *for*.
+En primer lugar (Para la ejecución con ciclo *for*), se realiza una exploración y extracción de los datos requeridos del dataset. Se realizan una serie de códigos para obtener la línea de las coordenadas X, Y y Z según lo especificado. Todo lo anterior utilizando listas y ciclos *for*.
 
 Luego, con los datos extraídos en la parte anterior, se calcularán las frecuencias de las coordenadas X, Y, y ambas en conjunto, con el objetivo de identificar los puntos más repetitivos y en cuantas oportunidades. Se realizará usando principalmente diccionarios y ciclos *for*.
 
@@ -58,7 +58,9 @@ A continuación, se procede a realizar el cambio de las coordenadas de metro a p
 
 Finalmente se ingresaran los valores de las coordenadas en un diccionario para posteriormente calcular las frecuencias de cada una, de esta manera se podrá identificar el conjunto de coordenadas que más se repite. Como se mencionó se usaran diccionarios, ciclos *for* y listas.
 
-Como extra también se identificarán los mínimos, máximos y varianzas de X e Y mediante el uso de la biblioteca Numpy. De igual manera esta biblioteca se utilizará en conjunto con Matplotlib para graficar un mapa de calor que permita visualizar el movimiento de las personas en el corredor según los pixeles.
+También se realizará mediante el uso de Pandas, estableciendo el dataset como dataframe. De esta manera se evitan todos los pasos anteriores del ciclo *for*, ya que se podrán extraer las columnas requeridas para el mapa de color sin extender el código.
+
+Para ambos casos en cada dataset utilizado se elaborarán mapas de color para analizar el flujo de los peatones en los corredores y evaluar el codigo mas óptimo.
 
 ## 4. Resultados obtenidos
 
@@ -71,22 +73,27 @@ Luego de realizar, ejecutar y corroborar que el código funciona correctamente s
 | Programa 1 (Archivo_2.py)|  6.3635852336883545  |   120.4296875   |
 | Programa 2 (Archivo_2.py)|  0.5664870738983154  |   132.65625   |
 
-El uso de memoria residente se encuentra expresado en la tabla anterior con un valor de 95.10 MB aproximadamente, de igual manera se obtuvo el uso de memoria virtual el cual corresponde a 89.296875 MB y el porcentaje de uso de la CPU del programa es de 6.675%.
+El 'Archivo_1' corresponde a los códigos con ciclo *for* y Pandas utilizando el dataset "UNI_CORR_500_01.txt" y para el 'Archivo_2' de igual manera se tienen los códigos con ciclo *for* y Pandas pero en este caso para el data set "UNI_CORR_500_07.txt".
 
-A continuación, se presenta el mapa de calor obtenido con las frecuencias en pixeles de las coordenadas X e Y del dataset, permitiendo identificar los pixeles que más se repiten. 
+Analizando los tiempos de ejecución se observa que los correspondientes a los programas 1 (ciclo *for*) para ambos dataset son más altos que los programas 2 (Pandas), principalmente por los extensos códigos. Aún asi, la memoria uilizada por los programas 2 es mayor a la utilizada por los programas 1, esto se debe a que se requieren mas librerías.
 
-Se puede apreciar que en los extremos (como la coordenada (640, 480)) el paso de los peatones es casi nulo y la mayor concentración se mantiene más centrada. En conjunto con la tabla anterior se comprueba que a lo largo del eje X la varianza es menor que en el eje Y, ya que los peatones se mueven hacia los costados para llegar al otro extremo.
+A continuación, se presenta el mapa de color (Archivo_1) obtenido con las frecuencias en pixeles de las coordenadas X e Y del dataset, permitiendo identificar los pixeles que más se repiten. Este mapa es obtenido con ambos códigos.
 
 <img src="images/Cmap_1.png" width="420">
+
+Teniendo en consideración que en centro derecho se encontraba una persona parada, se explica porque se separa el flujo de derecha a izquierda, para luego expandirse por el resto del corredor.
+
+Tambien se presenta el mapa de color correspondiente al 'Archivo_2' mediante ambos codigos. En este caso el mapa se ve mas uniforme, donde (de izquierda a derecha) se aprecia el recorrido de los peatones desde una entrada amplia a una salida más estrecha.
+
 <img src="images/Cmap_2.png" width="420">
 
 ## 5. Conclusiones
 
-Con la confección de este laboratorio se pudieron esclarecer ciertas cosas como, por ejemplo, es más práctico y rápido la extracción de caracteres de una lista de acuerdo al índice que crear listas nuevas usando ciclo *for*, de esta manera se evitan una serie de códigos extensos y que el tiempo de procesamiento aumente.
+Con la confección de este laboratorio se pudieron esclarecer ciertas cosas para el código con cliclo *for* como por ejemplo, es más práctico y rápido la extracción de caracteres de una lista de acuerdo al índice que crear listas nuevas usando ciclo *for*, de esta manera se evitan una serie de códigos extensos y que el tiempo de procesamiento aumente.
 
-También se corrobora la eficiencia del uso de los diccionarios, que permite relacionar las coordenadas con sus respectivas repeticiones, sin necesidad de crear dos lista por separado.
+También se corrobora la eficiencia del uso de los diccionarios, que permite relacionar las coordenadas con sus respectivas repeticiones, sin necesidad de crear dos lista por separado. Además se puede apreciar que, a diferencia de usar un ciclo *for*, el uso de funciones permite realizar los cálculos necesarios sin necesidad de aumentar la memoria en uso, ya que mientras no se llame a esta, no ocupa memoria.
 
-Finalmente se puede apreciar que, a diferencia de usar un ciclo *for*, el uso de funciones permite realizar los cálculos necesarios sin necesidad de aumentar la memoria en uso, ya que mientras no se llame a esta, no ocupa memoria.
+De igual manera al realizar el código usando la librería Pandas se comprueba que dimensión de los códigos se reducen considerablemente al igual que el tiempo de ejecución del programa a pesar de tener que sacrificar un poco más de memoria. Con dataframe se evitan utilizar múltiples ciclos *for*, listas y diccionarios para extraer columnas y formar la matriz de frecuencia.
 
 
 
