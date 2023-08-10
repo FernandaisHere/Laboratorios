@@ -42,7 +42,7 @@ A continuación, se presentan una serie de herramientas, estructuras y librería
 
 *Matplotlib*: Esta librería entrega múltiples códigos para realizar distintos tipos de gráficos, en este laboratorio se utilizara el gráfico de calor.
 
-*Pandas*: 
+*Pandas*: Es una librería que permitirá cargar, manipular y visualizar datos secuenciales, como series temporales y micromatrices.
 
 ## 3. Materiales y métodos
 
